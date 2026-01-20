@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>
+			E. Paolini: Isoperimetric Partitions: standard and non-standard
+			(Riccione 2026)
+		</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<link rel="stylesheet" href="mystyle.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<!--
+			color to alpha with imagemagik:
+
+		convert prova.png \( -clone 0 -fill "#a010101" -colorize 100 \) \( -clone 0,1 -compose difference -composite -separate +channel -evaluate-sequence max -auto-level \) -delete 1 -alpha off -compose over -compose copy_opacity -composite out.png
+		-->
+		<div class="reveal">
+			<div class="slides">
+				<section id="title_slide">
+					<h2><b>Isoperimetric Partitions
+						<br><small>standard and non-standard</small>
+					</b></h2>
+					<h4></h4>
+					<h4>[E. Paolini: Università di Pisa]</h4>
+					<h4></h4>
+					<h3>Riccione &dash; Feb 9, 2026</h3>
+					<div style="position: absolute; top: 100px; right: -160px; margin: 10px; padding-left: 16px; padding-right: 6px; background-color: white; border-radius: 10px;" >
+						<div data-href="https://paolini.github.io/2026-talk-Riccione" id="qrcode"></div>
+					</div>
+					<p class="center">
+						<a href="https://github.com/paolini/2025-talk-Riccione">
+							<img src="github.svg" witdh="25" height="25" style="filter: invert(1); position: relative; top: 5px; margin-right: 5px">
+						</a>
+						<small><i><a href="https://paolini.github.io/2025-talk-Trento">paolini.github.io/2025-talk-Trento</a></i></small>
+					</p>
+				</section>
+
+				<section>
+					<h4>Caccioppoli Partitions</h4>
+					<div>
+						$\mathbf E = (E_1, E_2, \ldots, E_N)$
+					</div>
+					<div>
+						$E_k \subseteq \mathbb R^d$, 
+						$E_k \cap E_j = \emptyset$ for $k \neq j$,
+						$\lvert \mathbb R^d \setminus \bigcup_{k=1}^N E_k \rvert = \mathbb R^d$
+						<br />
+					</div>
+				</section>
+
+				<section>
+					<h4>isoperimetric partitions</h4>
+				</section>
+
+				<section>
+					<div>
+						<b>thank you!</b>
+						<p class="center" style="margin-top: 150px;">
+							<a href="https://github.com/paolini/2025-talk-Riccione">
+								<img src="github.svg" witdh="25" height="25" style="filter: invert(1); position: relative; top: 5px; margin-right: 10px">
+							</a>
+							<small><i><a href="https://paolini.github.io/2025-talk-Trento">paolini.github.io/2025-talk-Trento</a></i></small>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				view: 'scroll',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+
+			function display_timer(minutes,seconds) {
+				document.getElementById("clock").textContent = 
+					minutes+":"+(""+seconds).padStart(2,"0");
+			}
+
+			(function () {
+				let timer_start = null;
+				setInterval(function (){
+					if (timer_start !== null) {
+						let t = Math.floor((new Date() - timer_start)/1000);
+						const seconds = t%60;
+						const minutes = Math.floor(t/60);
+						display_timer(minutes, seconds);
+					}
+				}, 1000);
+				Reveal.on('slidetransitionend', function(event) {
+					console.log("new slide", event);
+					if (event.previousSlide.id == "title_slide") {
+						timer_start = new Date();
+					}
+				})
+				Reveal.on('slidetransitionend', function(event) {
+					console.log("new slide", event);
+					if (event.currentSlide.id == "title_slide") {
+						timer_start = null;
+						display_timer("--","--");
+					}
+				})
+			})()
+
+			Reveal.on('ready', (event) => {console.log("ready", event)});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="text/javascript">
+			var element = document.getElementById("qrcode");
+			var href = element.dataset.href || element.parentElement.href;
+			new QRCode(element, {text: href, width: 200, height: 200, colorDark: "#111", colorLight: "#fff", correctLevel: QRCode.CorrectLevel.L});
+
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				let slides = document.querySelectorAll('.slideshow .slide');
+				let currentSlide = 0;
+
+				setInterval(function() {
+					slides[currentSlide].style.transition = 'opacity 1s';
+					slides[currentSlide].style.opacity = '0';
+					currentSlide = (currentSlide + 1) % slides.length;
+					slides[currentSlide].style.transition = 'opacity 1s';
+					slides[currentSlide].style.opacity = '1';
+				}, 5000);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+.reveal .slides p { text-align:left; }
+
+b { color: rgb(255, 166, 0); }
+
+h4 { 
+    color: rgb(255, 166, 0) !important; 
+}
+
+.MathJax, .katex{ color: rgb(189 252 209); }
+
+li { padding-top: 0.5em; }
+
+i { font-style: oblique; color: rgb(189, 252, 209)}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    vertical-align: middle;
+}
