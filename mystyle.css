@@ -1,16 +1,21 @@
-.reveal .slides p { text-align:left; }
-
-b { color: rgb(255, 166, 0); }
-
-h4 { 
-    color: rgb(255, 166, 0) !important; 
+:root {
+    --highlight-color: rgb(255, 166, 0);
+    --accent-color: rgb(189, 252, 209);
 }
 
-.MathJax, .katex{ color: rgb(189 252 209); }
+.reveal .slides p { text-align:left; }
+
+b { color: var(--highlight-color); }
+
+h4 { 
+    color: var(--highlight-color) !important; 
+}
+
+.MathJax, .katex{ color: var(--accent-color); }
 
 li { padding-top: 0.5em; }
 
-i { font-style: oblique; color: rgb(189, 252, 209)}
+i { font-style: oblique; color: var(--accent-color)}
 
 .center {
     display: flex;
@@ -21,3 +26,18 @@ i { font-style: oblique; color: rgb(189, 252, 209)}
 .middle {
     vertical-align: middle;
 }
+
+.bib-authors {
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.bib-journal {
+    font-size: smaller;
+    font-style: italic; 
+}
+
+.bib-title {
+    font-size: 0.7em;
+    color: var(--accent-color)
+}   
