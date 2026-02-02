@@ -16,6 +16,12 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.vertical-lines th:not(:last-child), 
+			.vertical-lines td:not(:last-child) {
+				border-right: 1px solid white;
+			}
+		</style>
 	</head>
 	<body>
 		<!--
@@ -49,21 +55,65 @@
 					</div>
 					<img src="partition.png" />
 					<div>
-						$E_k \subseteq \mathbb R^d$, 
-						$\lvert E_k \cap E_j \rvert = 0$ for $k \neq j$,
-						<br />
-						$\left\vert \mathbb R^d \setminus \displaystyle\bigcup_{k=1}^N E_k \right\vert = 0$
-						<br />
+						An $N$-partition of $\R^d$ is $N$-uple of subsets 
+						of $\R^d$ which are pairwise disjoint and 
+						whose union is $\R^d$.
 					</div>
 				</section>
 
 				<section>
-					<h4>isoperimetric partitions</h4>
-					<img src="perimeter.png" />
-					<div style="margin-top: -2em">
-						$$\mathrm{Per}(\mathbf E, B) 
-						= \frac 1 2 \sum_{k=1}^N \mathrm{Per}(E_k, B)$$
+					<h4>Perimeter</h4>
+					<img src="perimeter.png" style="margin-top: -2em;"/>
+					<p style="margin-top: -1em">
+						$\mathrm{Per}(\mathbf E, B) 
+						:= \frac 1 2 \sum_{k=1}^N \mathrm{Per}(E_k, B)$
+						is the total $(d-1)$-area of the interfaces
+						between the regions inside some subset $B$.
+					</p>
+				</section>
+
+				<section>
+					<h4>Isoperimetric partitions</h4>
+					<div class="r-stack">
+						<img src="isoperimetrico-0.png" class="fragment fade-out" data-fragment-index="0" />
+						<img src="isoperimetrico-1.png" class="fragment current-visible" data-fragment-index="0" />
+						<img src="isoperimetrico-2.png" class="fragment" data-fragment-index="1" />
 					</div>
+					<div class="r-stack" style="margin-top: -0.2em" >
+					<p class="fragment fade-out" data-fragment-index="0">
+						$$\mathrm{Per}(\mathbf E, B) \le \mathrm{Per}(\mathbf F,B)$$
+					</p>
+					<p class="fragment current-visible" data-fragment-index="0">
+						$$\mathrm{Per}(\mathbf E, B) \le \mathrm{Per}(\mathbf F,B)$$
+						(1) for every bounded $B$ and every $N$-partition $\mathbf F$
+						such that 
+						$F_k\triangle E_k \Subset B$ and 
+						$|F_k| = |E_k|$ for all $k$. 
+					</p>
+					<p class="fragment" data-fragment-index="1">
+						$$\mathrm{Per}(\mathbf E, B) \le \mathrm{Per}(\mathbf F,B)$$
+						(2) for every bounded $B$ and every $N$-partition $\mathbf F$
+						such that 
+						$F_k\triangle E_k \Subset B$ and 
+						$|F_k\cap B| = |E_k\cap B|$. 
+					</p>
+				</section>
+
+				<section>
+					<h4>Joint work</h4>
+					<ul>
+						<li>
+							<span class="bib-authors">Novaga-P.-Tortorelli</span> 
+							<span class="bib-journal">(TAMS 2025)</span><br/>
+							<span class="bib-title">locally isoperimetric partitions</span>
+						</li>
+
+						<li>
+							<span class="bib-authors">Novaga-P.-Tortorelli</span> 
+							<span class="bib-journal">(cvgmt 2025)</span><br/>
+							<span class="bib-title">existence of a non-standard isoperimetric partition</span>
+						</li>
+					</ul>
 				</section>
 
 				<section>
@@ -97,47 +147,134 @@
 				</section>
 
 				<section>
-					<h4>References</h4>
-					<ul>
-						<li>
-							<span class="bib-authors">Novaga-P.-Tortorelli</span> 
-							<span class="bib-journal">(TAMS 2025)</span><br/>
-							<span class="bib-title">locally isoperimetric partitions</span>
-						</li>
-
-						<li>
-							<span class="bib-authors">Novaga-P.-Tortorelli</span> 
-							<span class="bib-journal">(cvgmt 2025)</span><br/>
-							<span class="bib-title">existence of a non-standard isoperimetric partition</span>
-						</li>
-					</ul>
-				</section>
-
-				<section>
+					<h4>Isoperimetric Cluster</h4>
 					<img src="double-bubble.png" />
+					<p>When all regions but one, have finite measure<br />
+					an $(N+1)$-<b>partition</b> $(E_0, E_1, \ldots, E_N)$ <br />
+					is an $N$-<b>bubble cluster</b> $(E_1, \ldots, E_N)$.
+					</p>
 				</section>
 
 				<section>
+					<h4>Locally Minimal Partition</h4>
 					<img src="triple-partition.png" />
+					<p>
+						When all regions have infinite measure, <br/>
+						we have <b>no volume constraints</b>.
+					</p>
 				</section>
 
 				<section>
+					<h4>Standard partitions</h4>
 					<div class="r-stack">
-						<img src="standard-1.png" />
-						<img src="standard-2.png" class="fragment" />
+						<img src="standard-1.png" class="fragment fade-out" data-fragment-index="0" />
+						<img src="standard-2.png" class="fragment current-visible" data-fragment-index="0" />
+					</div>
+					<div class="r-stack" >
+						<p class="fragment fade-out" data-fragment-index="0">
+							If $N\le d+2$, there is a unique (up to isometries) <br />
+							<b>standard $N$-partition</b> of $\mathbb S^d$
+						</p>
+						<p class="fragment current-visible" data-fragment-index="0">
+							<b>Stereographic projections</b> give standard 
+							partitions, clusters or minimal partitions of $\R^d$.
+						</p>
 					</div>
 				</section>
 
 				<section>
+					<h4>Standard partitions $N=2,3,4$</h4>
 					<img src="esempi-standard.png" />
 				</section>
 
 				<section>
-					<img src="sandwich.png" />
+					<h4>Non-standard partitions</h4>
+					<img src="non-standard.png" />
 				</section>
 
 				<section>
-					<img src="simons.png" />
+					<h4>Standard bubbles conjecture</h4>
+					<p style="margin-top: 2em">
+						<b>Isoperimetric</b> $M$-bubble clusters
+						in $\R^d$ 
+						<br/>
+						...are <b>standard</b> for $M \le d+1$.
+						<br/>
+						(i.e. $M+1 = N \le d+2$)
+					</p>
+				</section>
+
+				<section>
+					<h4>known isoperimetric clusters</h4>
+					<table class="vertical-lines">
+						<thead>
+							<tr>
+								<th></th>
+								<th>$M$</th>
+								<th>$d=2$</th>
+								<th>$d=3$</th>
+								<th>$d\ge 4$</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><img src="small-bubble.png" style="margin:0"></td>
+								<th>$1$</th>
+								<td><small>Zenodoro</small></td>
+								<td><small>Steiner, Schwarz</small></td>
+								<td><small>De giorgi, Minkowski</small></td>
+							</tr>
+							<tr>
+								<td><img src="small-double-bubble.png" style="margin:0"></td>
+								<th>$2$</th>
+								<td><small>Foisy et al.</small></td>								
+								<td><small>Hutchings-Morgan-Ritoré-Ros</small></td>
+								<td><small>Reichardt</small></td>
+							</tr>
+							<tr>
+								<td><img src="small-triple-bubble.png" style="margin:0"></td>
+								<th>$3$</th>
+								<td><small>Wichiramala</small></td>							
+								<td rowspan="2" colspan="2" style="vertical-align:middle; text-align:center;"><small>Milman-Neeman</small></td>
+							</tr>
+							<tr>
+								<th><img src="small-quadruple-bubble.png" style="margin:0"></th>
+								<th>$4$</th>
+								<td style="background-color: #555; border-right: 1px solid white;">
+									<small>P.-Tamagnini-Tortorelli <sub>(equal areas)</sub></small>
+								</td>
+							</tr>
+							<tr>
+								<th>
+								</th>
+								<th>$\vdots$</th>
+								<td style="background-color: #555;"></td>
+								<td style="background-color: #555;"></td>
+								<td>&nbsp;&nbsp;?</td>
+							</tr>
+							<tr>
+								<th><img src="small-hales.png" style="margin:0"></th>
+								<th>$\infty$</th>
+								<td><small>Hales</small></td>
+								<td>&nbsp;&nbsp;?</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h4>Closure theorem</h4>
+
+					Limits of isoperimetric clusters are isoperimetric partitions.
+				</section>
+
+				<section>
+					<h4>Simons cone</h4>
+					<img src="simons.png" style="margin-bottom: -1.2em"/>
+					<p>
+						$$
+						E_1 := \{ (x,y)\in \R^4 : |x| \le |y| \}
+						$$
+					</p>
 				</section>
 
 				<section>
