@@ -13,7 +13,10 @@ h4 {
 
 .MathJax, .katex{ color: var(--accent-color); }
 
-li { padding-top: 0.5em; }
+li { 
+    padding-top: 0.5em; 
+    list-style-type: "» ";
+}
 
 i { font-style: oblique; color: var(--accent-color)}
 
@@ -33,7 +36,7 @@ i { font-style: oblique; color: var(--accent-color)}
 }
 
 .bib-journal {
-    font-size: smaller;
+    font-size: 70%;
     font-style: italic; 
 }
 
