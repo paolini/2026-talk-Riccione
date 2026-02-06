@@ -34,12 +34,14 @@
 				<section id="title_slide">
 					<h2 style="font-size: 40pt;"><b>standard and non-standard</b></h2>
 					<h2><b>Isoperimetric Partitions</b></h2>
+					<img src="logo_dm.png" style="position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 150px;">
+					<img src="cherubino_white.png" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0; width: 150px;">
 					<h4>[E. Paolini: Università di Pisa]</h4>
 					<h4></h4>
 					<h3>Riccione &dash; Feb 9, 2026</h3>
-					<div style="position: absolute; top: 100px; right: -160px; margin: 10px; padding-left: 16px; padding-right: 6px; background-color: white; border-radius: 10px;" >
+					<!--div style="position: absolute; top: 100px; right: -160px; margin: 10px; padding-left: 16px; padding-right: 6px; background-color: white; border-radius: 10px;" >
 						<div data-href="https://paolini.github.io/2026-talk-Riccione" id="qrcode"></div>
-					</div>
+					</div-->
 					<p class="center">
 						<a href="https://github.com/paolini/2025-talk-Riccione">
 							<img src="github.svg" witdh="25" height="25" style="filter: invert(1); position: relative; top: 5px; margin-right: 5px">
@@ -222,7 +224,7 @@
 								<th>$1$</th>
 								<td><small>Zenodoro</small></td>
 								<td><small>Steiner, Schwarz</small></td>
-								<td><small>De giorgi, Minkowski</small></td>
+								<td><small>Minkowski, De&nbsp;Giorgi</small></td>
 							</tr>
 							<tr>
 								<td><img src="small-double-bubble.png" style="margin:0"></td>
@@ -234,29 +236,36 @@
 							<tr>
 								<td><img src="small-triple-bubble.png" style="margin:0"></td>
 								<th>$3$</th>
-								<td><small>Wichiramala</small></td>							
-								<td rowspan="2" colspan="2" style="vertical-align:middle; text-align:center;"><small>Milman-Neeman</small></td>
+								<td><small>Wichiramala</small></td>				
+								<!--td style="border-right: none;"></td-->
+								<td colspan="2" style="vertical-align:bottom; text-align:right; border-bottom: none;">
+									<small style="position: relative; top: 15px;">Milman-Neeman</small>
+								</td>
 							</tr>
 							<tr>
 								<th><img src="small-quadruple-bubble.png" style="margin:0"></th>
 								<th>$4$</th>
 								<td style="background-color: #555; border-right: 1px solid white;">
-									<small>P.-Tamagnini-Tortorelli <sub>(equal areas)</sub></small>
+									<small>P.-Tamagnini-Tortorelli <sub>(*equal areas)</sub></small>
 								</td>
+								<td style="border-top: 1px solid white;vertical-align: middle; text-align:center">
+									<small><i>conjectured</i></small></td>
+								<td style="border-top: none;"></td>
 							</tr>
 							<tr>
 								<th>
 								</th>
 								<th>$\vdots$</th>
-								<td style="background-color: #555;"></td>
-								<td style="background-color: #555;"></td>
-								<td>&nbsp;&nbsp;?</td>
+								<td colspan="2" style="background-color: #555;text-align: center;">?</td>
+								<td>
+									<small><i>conjectured for $M\le d+1$</i></small></td>
+								</td>
 							</tr>
 							<tr>
 								<th><img src="small-hales.png" style="margin:0"></th>
 								<th>$\infty$</th>
 								<td><small>Hales</small></td>
-								<td>&nbsp;&nbsp;?</td>
+								<td></td>
 							</tr>
 						</tbody>
 					</table>
@@ -279,17 +288,16 @@
 
 				<section>
 					<h4>Simons cone</h4>
-					<img src="simons.png" style="margin-bottom: -1.2em;margin-top: -0.5em"/>
+					<img src="simons.png" style="margin-bottom: -.2em;margin-top: -0.5em"/>
 					<p style="text-align: center;">
-						$$
-						E_1 := \{ (x,y)\in \R^4 : |x| \le |y| \}
-						$$
+						$E_1 := \{ (x,y)\in \R^4\times \R^4 : |x| \le |y| \}$
+						<br/>
 						is a <b>non-standard</b> isoperimetric $2$-partition
 					</p>
 				</section>
 
 				<section>
-					<h4>Simons bubble</h4>
+					<h4>&ldquo;Simons bubble&rdquo;</h4>
 					<img src="simons-bubble.png" />
 					<p style="text-align: center;">
 						<i>Open question</i>: is it <b>isoperimetric</b>?
@@ -304,7 +312,8 @@
 						$3$-partition
 						$(E_1,E_2,E_3)$ in $\R^8$ with <br/>
 						$|E_1| = |E_2| = \infty$,
-						 $|E_3| = 1$. 
+						 $|E_3| = 1$
+						whose blow-down is a <b>minimal</b> singular <b>cone</b>.
 					</p>
 				</section>
 
@@ -330,6 +339,7 @@
 
 				<section>
 					<div>
+						<h3>The End</h3>
 						<b class="fragment">thank you!</b>
 						<p class="center" style="margin-top: 150px;">
 							<a href="https://github.com/paolini/2026-talk-Riccione">
