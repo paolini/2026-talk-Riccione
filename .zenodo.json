@@ -1,0 +1,31 @@
+{
+  "upload_type": "presentation",
+  "title": "Isoperimetric partitions: standard and non-standard",
+  "description": "<p>Slides of the talk given on 9 February 2026 at the conference <em>XXXV Convegno Nazionale di Calcolo delle Variazioni</em> (Riccione, Italy, 9-13 February 2026).</p><p>The slides are an HTML presentation built with <a href=\"https://revealjs.com/\">reveal.js</a>: unzip the archive and open <code>index.html</code> in a web browser. All dependencies are bundled, so no internet connection is needed.</p><p>Online version: <a href=\"https://paolini.github.io/2026-talk-Riccione/\">https://paolini.github.io/2026-talk-Riccione/</a></p>",
+  "creators": [
+    {
+      "name": "Paolini, Emanuele",
+      "affiliation": "Università di Pisa",
+      "orcid": "0000-0001-7021-7537"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": [
+    "calculus of variations",
+    "isoperimetric problem",
+    "isoperimetric partitions",
+    "minimal clusters",
+    "standard bubbles"
+  ],
+  "conference_title": "XXXV Convegno Nazionale di Calcolo delle Variazioni",
+  "conference_dates": "9-13 February 2026",
+  "conference_place": "Riccione, Italy",
+  "related_identifiers": [
+    {
+      "identifier": "https://paolini.github.io/2026-talk-Riccione/",
+      "relation": "isIdenticalTo",
+      "resource_type": "presentation"
+    }
+  ]
+}
